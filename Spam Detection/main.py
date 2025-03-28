@@ -39,8 +39,8 @@ def predict(text):
     trans_text = transform_text(text) # preprocessing
     scaled_text = scaler.transform([trans_text])
     prediction = model.predict(scaled_text)[0]
-    if prediction==0:  return " Not Spam Mail", "https://media.istockphoto.com/id/1462430494/vector/yellow-paper-envelope-with-green-checkmark-on-white-background-no-viruses-cincept-3d-vector.jpg?s=1024x1024&w=is&k=20&c=q2Es9we59N7PBXfYsh2Ytq91IqNFTdmOzEQhmo6aU7Y="
-    else:  return "Spam Mail", "https://cdn.prod.website-files.com/659fa592476e081fbd5a3335/669f84768899d32f200f7556_spamz.png"
+    if prediction==0:  return "This message is not a spam sms", "https://media.istockphoto.com/id/1462430494/vector/yellow-paper-envelope-with-green-checkmark-on-white-background-no-viruses-cincept-3d-vector.jpg?s=1024x1024&w=is&k=20&c=q2Es9we59N7PBXfYsh2Ytq91IqNFTdmOzEQhmo6aU7Y="
+    else:  return "This message is a spam sms", "https://cdn.prod.website-files.com/659fa592476e081fbd5a3335/669f84768899d32f200f7556_spamz.png"
 
 demo = gr.Interface(
     fn=predict,
