@@ -74,7 +74,7 @@ iface = gr.Interface(
     title=title,
     description=description,
     examples=examples,
-    allow_flagging="never" 
+    # allow_flagging="never" 
 )
 
 # --- 4. LAUNCH THE APP ---
